@@ -13,11 +13,17 @@ namespace RockPaperScissorsTests
     {
     public:
 
-        // TEST 1: Both players choose Rock - should return "Draw"
         TEST_METHOD(Test_BothPlayersChooseRock_ReturnsDraw)
         {
             char* result = rockPaperScissors("Rock", "Rock");
             Assert::AreEqual("Draw", result);
+        }
+
+        // TEST 2: Player1 chooses Rock, Player2 chooses Scissors - Player1 wins
+        TEST_METHOD(Test_RockBeatsScissors_ReturnsPlayer1)
+        {
+            char* result = rockPaperScissors("Rock", "Scissors");
+            Assert::AreEqual("Player1", result);
         }
     };
 }
