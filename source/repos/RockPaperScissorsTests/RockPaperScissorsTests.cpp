@@ -75,5 +75,17 @@ namespace RockPaperScissorsTests
             char* result = rockPaperScissors("Cat", "Dog");
             Assert::AreEqual("Invalid", result);
         }
+        // TEST 13: Case sensitivity - lowercase should be invalid
+        TEST_METHOD(Test_LowercaseInput_ReturnsInvalid)
+        {
+            char* result = rockPaperScissors("rock", "Paper");
+            Assert::AreEqual("Invalid", result);
+        }
+        // TEST 14: Empty string
+        TEST_METHOD(Test_EmptyString_ReturnsInvalid)
+        {
+            char* result = rockPaperScissors("", "Rock");
+            Assert::AreEqual("Invalid", result);
+        }
     };
 }
