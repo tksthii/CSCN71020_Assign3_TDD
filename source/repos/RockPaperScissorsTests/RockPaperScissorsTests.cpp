@@ -65,5 +65,15 @@ namespace RockPaperScissorsTests
             char* result = rockPaperScissors("Stone", "Rock");
             Assert::AreEqual("Invalid", result);
         }
+        TEST_METHOD(Test_InvalidPlayer2Input_ReturnsInvalid)
+        {
+            char* result = rockPaperScissors("Rock", "Lizard");
+            Assert::AreEqual("Invalid", result);
+        }
+        TEST_METHOD(Test_BothPlayersInvalid_ReturnsInvalid)
+        {
+            char* result = rockPaperScissors("Cat", "Dog");
+            Assert::AreEqual("Invalid", result);
+        }
     };
 }
