@@ -50,5 +50,17 @@ namespace RockPaperScissorsTests
             char* result = rockPaperScissors("Paper", "Scissors");
             Assert::AreEqual("Player2", result);
         }
+        // TEST 8: Both choose Paper - Draw
+        TEST_METHOD(Test_BothChoosePaper_ReturnsDraw)
+        {
+            char* result = rockPaperScissors("Paper", "Paper");
+            Assert::AreEqual("Draw", result);
+        }
+        // TEST 9: Both choose Scissors - Draw
+        TEST_METHOD(Test_BothChooseScissors_ReturnsDraw)
+        {
+            char* result = rockPaperScissors("Scissors", "Scissors");
+            Assert::AreEqual("Draw", result);
+        }
     };
 }
