@@ -14,6 +14,9 @@ char* rockPaperScissors(const char* player1, const char* player2) {
     if (strcmp(player1, "Paper") == 0 && strcmp(player2, "Rock") == 0) {
         return "Player1";
     }
+    if (strcmp(player1, "Scissors") == 0 && strcmp(player2, "Paper") == 0) {
+        return "Player1";
+    }
 
     // Player2 wins cases
     if (strcmp(player1, "Scissors") == 0 && strcmp(player2, "Rock") == 0) {
@@ -25,4 +28,3 @@ char* rockPaperScissors(const char* player1, const char* player2) {
 
     return "Draw";
 }
-
