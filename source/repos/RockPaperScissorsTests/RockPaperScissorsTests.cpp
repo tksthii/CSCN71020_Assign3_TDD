@@ -40,5 +40,10 @@ namespace RockPaperScissorsTests
             char* result = rockPaperScissors("Rock", "Paper");
             Assert::AreEqual("Player2", result);
         }
+        TEST_METHOD(Test_ScissorsBeatsPaper_ReturnsPlayer1)
+        {
+            char* result = rockPaperScissors("Scissors", "Paper");
+            Assert::AreEqual("Player1", result);
+        }
     };
 }
