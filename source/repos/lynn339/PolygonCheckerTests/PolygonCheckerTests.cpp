@@ -40,5 +40,18 @@ namespace PolygonCheckerTests
 
             Assert::AreEqual("Isosceles", result);
         }
+
+        // TEST 3: Scalene triangle
+        TEST_METHOD(Test03_Scalene)
+        {
+            double side1 = 3.0;
+            double side2 = 4.0;
+            double side3 = 5.0;
+
+            char* result = classifyTriangle(side1, side2, side3);
+
+            Assert::AreEqual("Scalene", result);
+        }
+
     };
 }
